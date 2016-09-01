@@ -1,0 +1,56 @@
+import csv
+import numpy as np
+with open('Available_Resource_Aggregates.csv') as csvfile:
+ spamreader = csv.reader(csvfile, delimiter=' ', quotechar='|')
+ available_resource_information = list(spamreader)
+with open('Migration_Cost.csv') as csvfile1:
+ migration_cost_matrix = list(csv.reader(csvfile1, delimiter= ' ', quotechar='|'))
+with open('Resource_Min_SLA.csv') as csvfile2:
+ optimal_resource = list(csv.reader(csvfile2,delimiter= ' ', quotechar='|'))
+with open('utility_location.csv') as csvfile3:
+ VM_information =list(csv.reader(csvfile3 ))
+number_of_resource_types = 3
+# initialize objects
+final_net_utility = 0
+utility_at_VM = []
+current_net_utility = 0.4
+total_number_of_VMs = len(VM_information)
+temp=np.array(VM_information)
+utility_at_VM = temp[:,0]
+#utility_at_VM.append(row[1] for row in VM_information)
+bid = [0] * 5
+price_vector = [[1]*3]*5
+print utility_at_VM
+print VM_information
+print price_vector
+print available_resource_information
+#price_vector[0] = available_resource_information[1]
+print total_number_of_VMs
+
+#read price vector from file
+for i in range(0 , total_number_of_VMs) :
+     price_vector[i] = available_resource_information[2*i+1]
+print price_vector
+
+     
+#Calculate bids accross all the candidate VMs
+print optimal_resource 
+print np.array(optimal_resource[0]).T 
+print price_vector[0]
+for j in range(0 , total_number_of_VMs):
+    a =  np.array(optimal_resource[0]).T
+    b =  np.array(price_vector[j]) 
+   print a
+   print b
+   
+    bid[j] = float(utility_at_VM[j]) + ( float(current_net_utility) - float( utility_at_VM[j]))**2 
+#Find the VM which gives min BID
+for i in range(0 , total_number_of_VMs) :
+    if min(bid) == bid[i]:    
+       print "Min Bid at VM%d, bid(VM %d) = %d." % (i, i , min(bid))
+       final_net_utility = utility_at_VM[i]
+ 
+
+
+ 
+

@@ -1,0 +1,405 @@
+
+
+<rspec xmlns="http://www.geni.net/resources/rspec/3" xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" xmlns:tour="http://www.protogeni.net/resources/rspec/ext/apt-tour/1" xmlns:jacks="http://www.protogeni.net/resources/rspec/ext/jacks/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.geni.net/resources/rspec/3    http://www.geni.net/resources/rspec/3/request.xsd" type="request">
+  <node client_id="Controller" component_id="urn:publicid:IDN+instageni.rnet.missouri.edu+node+pc2" component_manager_id="urn:publicid:IDN+instageni.rnet.missouri.edu+authority+cm" exclusive="false" sliver_id="urn:publicid:IDN+instageni.rnet.missouri.edu+sliver+29506" xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1">
+    <icon url="https://www.emulab.net/protogeni/jacks-stable/images/default.svg" xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1"/>
+    <routable_control_ip xmlns="http://www.protogeni.net/resources/rspec/ext/emulab/1"/>
+    <sliver_type name="emulab-xen">
+      <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU12-64-STD"/>
+    </sliver_type>
+    <services>
+      <login authentication="ssh-keys" hostname="pcvm2-11.instageni.rnet.missouri.edu" port="22" username="ae266"/>
+      <login authentication="ssh-keys" hostname="pcvm2-11.instageni.rnet.missouri.edu" port="22" username="calyamp"/>
+      <emulab:console server="pcvm2-11.instageni.rnet.missouri.edu"/>
+    </services>
+    <emulab:vnode hardware_type="pcvm" name="pcvm2-11"/>
+    <host name="Controller.MTD.ch-geni-net.instageni.rnet.missouri.edu"/>
+  </node>
+  <node client_id="server1" component_id="urn:publicid:IDN+instageni.idre.ucla.edu+node+pc2" component_manager_id="urn:publicid:IDN+instageni.idre.ucla.edu+authority+cm" exclusive="false" sliver_id="urn:publicid:IDN+instageni.idre.ucla.edu+sliver+14713" xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1">
+    <icon url="https://www.emulab.net/protogeni/jacks-stable/images/server.svg" xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1"/>
+    <sliver_type name="emulab-xen">
+      <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU12-64-STD"/>
+    </sliver_type>
+    <services>
+      <login authentication="ssh-keys" hostname="pc2.instageni.idre.ucla.edu" port="31035" username="ae266"/>
+      <login authentication="ssh-keys" hostname="pc2.instageni.idre.ucla.edu" port="31035" username="calyamp"/>
+      <emulab:console server="pc2.instageni.idre.ucla.edu"/>
+    </services>
+    <interface client_id="interface-9" component_id="urn:publicid:IDN+instageni.idre.ucla.edu+interface+pc2:lo0" mac_address="0252d232764d" sliver_id="urn:publicid:IDN+instageni.idre.ucla.edu+sliver+14718">
+      <ip address="10.10.1.2" type="ipv4"/>
+    </interface>
+    <emulab:vnode hardware_type="pcvm" name="pcvm2-34"/>
+    <host name="server1.MTD.ch-geni-net.instageni.idre.ucla.edu"/>
+  </node>
+  <node client_id="server2" component_id="urn:publicid:IDN+instageni.idre.ucla.edu+node+pc2" component_manager_id="urn:publicid:IDN+instageni.idre.ucla.edu+authority+cm" exclusive="false" sliver_id="urn:publicid:IDN+instageni.idre.ucla.edu+sliver+14714" xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1">
+    <icon url="https://www.emulab.net/protogeni/jacks-stable/images/server.svg" xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1"/>
+    <sliver_type name="emulab-xen">
+      <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU12-64-STD"/>
+    </sliver_type>
+    <services>
+      <login authentication="ssh-keys" hostname="pc2.instageni.idre.ucla.edu" port="31036" username="ae266"/>
+      <login authentication="ssh-keys" hostname="pc2.instageni.idre.ucla.edu" port="31036" username="calyamp"/>
+      <emulab:console server="pc2.instageni.idre.ucla.edu"/>
+    </services>
+    <interface client_id="interface-11" component_id="urn:publicid:IDN+instageni.idre.ucla.edu+interface+pc2:lo0" mac_address="02e6fc6c90f7" sliver_id="urn:publicid:IDN+instageni.idre.ucla.edu+sliver+14721">
+      <ip address="10.10.2.2" type="ipv4"/>
+    </interface>
+    <emulab:vnode hardware_type="pcvm" name="pcvm2-38"/>
+    <host name="server2.MTD.ch-geni-net.instageni.idre.ucla.edu"/>
+  </node>
+  <node client_id="client" component_id="urn:publicid:IDN+instageni.idre.ucla.edu+node+pc3" component_manager_id="urn:publicid:IDN+instageni.idre.ucla.edu+authority+cm" exclusive="false" sliver_id="urn:publicid:IDN+instageni.idre.ucla.edu+sliver+14711" xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1">
+    <icon url="https://www.emulab.net/protogeni/jacks-stable/images/server.svg" xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1"/>
+    <sliver_type name="emulab-xen">
+      <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU12-64-STD"/>
+    </sliver_type>
+    <services>
+      <login authentication="ssh-keys" hostname="pc3.instageni.idre.ucla.edu" port="31034" username="ae266"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.idre.ucla.edu" port="31034" username="calyamp"/>
+      <emulab:console server="pc3.instageni.idre.ucla.edu"/>
+    </services>
+    <interface client_id="interface-13" component_id="urn:publicid:IDN+instageni.idre.ucla.edu+interface+pc3:eth1" mac_address="02e3f296ec22" sliver_id="urn:publicid:IDN+instageni.idre.ucla.edu+sliver+14724">
+      <ip address="10.10.3.2" type="ipv4"/>
+    </interface>
+    <emulab:vnode hardware_type="pcvm" name="pcvm3-2"/>
+    <host name="client.MTD.ch-geni-net.instageni.idre.ucla.edu"/>
+  </node>
+  <node client_id="server4" component_id="urn:publicid:IDN+instageni.nysernet.org+node+pc3" component_manager_id="urn:publicid:IDN+instageni.nysernet.org+authority+cm" exclusive="false" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+33239" xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1">
+    <icon url="https://www.emulab.net/protogeni/jacks-stable/images/server.svg" xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1"/>
+    <sliver_type name="emulab-xen">
+      <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU12-64-STD"/>
+    </sliver_type>
+    <services>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="30778" username="ae266"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.nysernet.org" port="30778" username="calyamp"/>
+      <emulab:console server="pc3.instageni.nysernet.org"/>
+    </services>
+    <interface client_id="interface-7" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc3:eth1" mac_address="02b251041b79" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+33248">
+      <ip address="10.10.2.2" type="ipv4"/>
+    </interface>
+    <emulab:vnode hardware_type="pcvm" name="pcvm3-5"/>
+    <host name="server4.MTD.ch-geni-net.instageni.nysernet.org"/>
+  </node>
+  <node client_id="server3" component_id="urn:publicid:IDN+instageni.nysernet.org+node+pc2" component_manager_id="urn:publicid:IDN+instageni.nysernet.org+authority+cm" exclusive="false" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+33241" xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1">
+    <icon url="https://www.emulab.net/protogeni/jacks-stable/images/server.svg" xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1"/>
+    <sliver_type name="emulab-xen">
+      <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU12-64-STD"/>
+    </sliver_type>
+    <services>
+      <login authentication="ssh-keys" hostname="pc2.instageni.nysernet.org" port="30779" username="ae266"/>
+      <login authentication="ssh-keys" hostname="pc2.instageni.nysernet.org" port="30779" username="calyamp"/>
+      <emulab:console server="pc2.instageni.nysernet.org"/>
+    </services>
+    <interface client_id="interface-5" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc2:lo0" mac_address="0206851d1de9" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+33245">
+      <ip address="10.10.1.2" type="ipv4"/>
+    </interface>
+    <emulab:vnode hardware_type="pcvm" name="pcvm2-4"/>
+    <host name="server3.MTD.ch-geni-net.instageni.nysernet.org"/>
+  </node>
+  <node client_id="OVS2" component_id="urn:publicid:IDN+instageni.nysernet.org+node+pc2" component_manager_id="urn:publicid:IDN+instageni.nysernet.org+authority+cm" exclusive="false" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+33240" xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1">
+    <icon url="https://portal.geni.net/images/router.svg" xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1"/>
+    <sliver_type name="emulab-xen">
+      <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU14-OVS2.31"/>
+    </sliver_type>
+    <services>
+      <login authentication="ssh-keys" hostname="pc2.instageni.nysernet.org" port="30778" username="ae266"/>
+      <login authentication="ssh-keys" hostname="pc2.instageni.nysernet.org" port="30778" username="calyamp"/>
+      <emulab:console server="pc2.instageni.nysernet.org"/>
+    </services>
+    <interface client_id="interface-4" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc2:lo0" mac_address="023a9faaa71e" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+33244">
+      <ip address="10.10.1.1" type="ipv4"/>
+    </interface>
+    <interface client_id="interface-6" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc2:eth1" mac_address="02cfd79d83cf" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+33247">
+      <ip address="10.10.2.1" type="ipv4"/>
+    </interface>
+    <interface client_id="interface-1" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc2:eth1" mac_address="020d521ccb01" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+33250">
+      <ip address="10.10.3.2" type="ipv4"/>
+    </interface>
+    <interface client_id="interface-14" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc2:eth1" mac_address="02dc7810bbc7" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+33252">
+      <ip address="10.10.4.1" type="ipv4"/>
+    </interface>
+    <emulab:vnode hardware_type="pcvm" name="pcvm2-3"/>
+    <host name="OVS2.MTD.ch-geni-net.instageni.nysernet.org"/>
+  </node>
+  <node client_id="OVS1" component_id="urn:publicid:IDN+instageni.idre.ucla.edu+node+pc2" component_manager_id="urn:publicid:IDN+instageni.idre.ucla.edu+authority+cm" exclusive="false" sliver_id="urn:publicid:IDN+instageni.idre.ucla.edu+sliver+14712" xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1">
+    <icon url="https://portal.geni.net/images/router.svg" xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1"/>
+    <sliver_type name="emulab-xen">
+      <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU14-OVS2.31"/>
+    </sliver_type>
+    <services>
+      <login authentication="ssh-keys" hostname="pc2.instageni.idre.ucla.edu" port="31034" username="ae266"/>
+      <login authentication="ssh-keys" hostname="pc2.instageni.idre.ucla.edu" port="31034" username="calyamp"/>
+      <emulab:console server="pc2.instageni.idre.ucla.edu"/>
+    </services>
+    <interface client_id="interface-8" component_id="urn:publicid:IDN+instageni.idre.ucla.edu+interface+pc2:lo0" mac_address="0291f63a58e2" sliver_id="urn:publicid:IDN+instageni.idre.ucla.edu+sliver+14717">
+      <ip address="10.10.1.1" type="ipv4"/>
+    </interface>
+    <interface client_id="interface-10" component_id="urn:publicid:IDN+instageni.idre.ucla.edu+interface+pc2:lo0" mac_address="0263706108e2" sliver_id="urn:publicid:IDN+instageni.idre.ucla.edu+sliver+14720">
+      <ip address="10.10.2.1" type="ipv4"/>
+    </interface>
+    <interface client_id="interface-12" component_id="urn:publicid:IDN+instageni.idre.ucla.edu+interface+pc2:eth1" mac_address="02443075c7ef" sliver_id="urn:publicid:IDN+instageni.idre.ucla.edu+sliver+14723">
+      <ip address="10.10.3.1" type="ipv4"/>
+    </interface>
+    <interface client_id="interface-0" component_id="urn:publicid:IDN+instageni.idre.ucla.edu+interface+pc2:eth1" mac_address="025338d3ca2c" sliver_id="urn:publicid:IDN+instageni.idre.ucla.edu+sliver+14726">
+      <ip address="10.10.4.1" type="ipv4"/>
+    </interface>
+    <emulab:vnode hardware_type="pcvm" name="pcvm2-24"/>
+    <host name="OVS1.MTD.ch-geni-net.instageni.idre.ucla.edu"/>
+  </node>
+  <node client_id="node-0" component_id="urn:publicid:IDN+instageni.illinois.edu+node+pc3" component_manager_id="urn:publicid:IDN+instageni.illinois.edu+authority+cm" exclusive="false" sliver_id="urn:publicid:IDN+instageni.illinois.edu+sliver+42353" xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1">
+    <icon url="https://portal.geni.net/images/Xen-VM.svg" xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1"/>
+    <sliver_type name="emulab-xen">
+      <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU12-64-STD"/>
+    </sliver_type>
+    <services>
+      <login authentication="ssh-keys" hostname="pc3.instageni.illinois.edu" port="36666" username="ae266"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.illinois.edu" port="36666" username="calyamp"/>
+      <emulab:console server="pc3.instageni.illinois.edu"/>
+    </services>
+    <interface client_id="interface-17" component_id="urn:publicid:IDN+instageni.illinois.edu+interface+pc3:lo0" mac_address="024767f1ee4c" sliver_id="urn:publicid:IDN+instageni.illinois.edu+sliver+42360">
+      <ip address="10.10.2.2" type="ipv4"/>
+    </interface>
+    <emulab:vnode hardware_type="pcvm" name="pcvm3-23"/>
+    <host name="node-0.MTD.ch-geni-net.instageni.illinois.edu"/>
+  </node>
+  <node client_id="node-1" component_id="urn:publicid:IDN+instageni.illinois.edu+node+pc3" component_manager_id="urn:publicid:IDN+instageni.illinois.edu+authority+cm" exclusive="false" sliver_id="urn:publicid:IDN+instageni.illinois.edu+sliver+42354" xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1">
+    <icon url="https://portal.geni.net/images/router.svg" xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1"/>
+    <sliver_type name="emulab-xen">
+      <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU14-OVS2.31"/>
+    </sliver_type>
+    <services>
+      <login authentication="ssh-keys" hostname="pc3.instageni.illinois.edu" port="36667" username="ae266"/>
+      <login authentication="ssh-keys" hostname="pc3.instageni.illinois.edu" port="36667" username="calyamp"/>
+      <emulab:console server="pc3.instageni.illinois.edu"/>
+    </services>
+    <interface client_id="interface-15" component_id="urn:publicid:IDN+instageni.illinois.edu+interface+pc3:eth1" mac_address="029c39061d74" sliver_id="urn:publicid:IDN+instageni.illinois.edu+sliver+42357">
+      <ip address="10.10.1.2" type="ipv4"/>
+    </interface>
+    <interface client_id="interface-16" component_id="urn:publicid:IDN+instageni.illinois.edu+interface+pc3:lo0" mac_address="02a2e94a8a88" sliver_id="urn:publicid:IDN+instageni.illinois.edu+sliver+42359">
+      <ip address="10.10.2.1" type="ipv4"/>
+    </interface>
+    <emulab:vnode hardware_type="pcvm" name="pcvm3-33"/>
+    <host name="node-1.MTD.ch-geni-net.instageni.illinois.edu"/>
+  </node>
+  <link client_id="link-2" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+33243">
+    <interface_ref client_id="interface-4" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc2:lo0" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+33244"/>
+    <interface_ref client_id="interface-5" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc2:lo0" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+33245"/>
+    <component_manager name="urn:publicid:IDN+instageni.nysernet.org+authority+cm"/>
+  </link>
+  <link client_id="link-3" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+33246" vlantag="260">
+    <interface_ref client_id="interface-6" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc2:eth1" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+33247"/>
+    <interface_ref client_id="interface-7" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc3:eth1" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+33248"/>
+    <component_manager name="urn:publicid:IDN+instageni.nysernet.org+authority+cm"/>
+  </link>
+  <link client_id="link-4" xmlns="http://www.geni.net/resources/rspec/3">
+    <interface_ref client_id="interface-8" xmlns="http://www.geni.net/resources/rspec/3"/>
+    <interface_ref client_id="interface-9" xmlns="http://www.geni.net/resources/rspec/3"/>
+    <component_manager name="urn:publicid:IDN+instageni.idre.ucla.edu+authority+cm" xmlns="http://www.geni.net/resources/rspec/3"/>
+  </link>
+  <link client_id="link-5" xmlns="http://www.geni.net/resources/rspec/3">
+    <interface_ref client_id="interface-10" xmlns="http://www.geni.net/resources/rspec/3"/>
+    <interface_ref client_id="interface-11" xmlns="http://www.geni.net/resources/rspec/3"/>
+    <component_manager name="urn:publicid:IDN+instageni.idre.ucla.edu+authority+cm" xmlns="http://www.geni.net/resources/rspec/3"/>
+  </link>
+  <link client_id="link-6" sliver_id="urn:publicid:IDN+instageni.idre.ucla.edu+sliver+14722" vlantag="260">
+    <interface_ref client_id="interface-12" component_id="urn:publicid:IDN+instageni.idre.ucla.edu+interface+pc2:eth1" sliver_id="urn:publicid:IDN+instageni.idre.ucla.edu+sliver+14723"/>
+    <interface_ref client_id="interface-13" component_id="urn:publicid:IDN+instageni.idre.ucla.edu+interface+pc3:eth1" sliver_id="urn:publicid:IDN+instageni.idre.ucla.edu+sliver+14724"/>
+    <component_manager name="urn:publicid:IDN+instageni.idre.ucla.edu+authority+cm"/>
+  </link>
+  <link client_id="link-0" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+33249" vlantag="1700">
+    <link_type name="vlan"/>
+    <interface_ref client_id="interface-0" component_id="urn:publicid:IDN+instageni.idre.ucla.edu+interface+pc2:eth1" sliver_id="urn:publicid:IDN+instageni.idre.ucla.edu+sliver+14726"/>
+    <interface_ref client_id="interface-1" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc2:eth1" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+33250"/>
+    <component_manager name="urn:publicid:IDN+al2s.internet2.edu+authority+am"/>
+    <component_manager name="urn:publicid:IDN+instageni.nysernet.org+authority+cm"/>
+    <component_manager name="urn:publicid:IDN+instageni.idre.ucla.edu+authority+cm"/>
+    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="interface-0" dest_id="interface-1" capacity="20000"/>
+    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="interface-1" dest_id="interface-0" capacity="20000"/>
+  </link>
+  <link client_id="link-7" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+33251" vlantag="1703">
+    <link_type name="vlan"/>
+    <interface_ref client_id="interface-14" component_id="urn:publicid:IDN+instageni.nysernet.org+interface+pc2:eth1" sliver_id="urn:publicid:IDN+instageni.nysernet.org+sliver+33252"/>
+    <interface_ref client_id="interface-15" component_id="urn:publicid:IDN+instageni.illinois.edu+interface+pc3:eth1" sliver_id="urn:publicid:IDN+instageni.illinois.edu+sliver+42357"/>
+    <component_manager name="urn:publicid:IDN+instageni.nysernet.org+authority+cm"/>
+    <component_manager name="urn:publicid:IDN+al2s.internet2.edu+authority+am"/>
+    <component_manager name="urn:publicid:IDN+instageni.illinois.edu+authority+cm"/>
+    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="interface-14" dest_id="interface-15" capacity="20000"/>
+    <property xmlns="http://www.geni.net/resources/rspec/3" source_id="interface-15" dest_id="interface-14" capacity="20000"/>
+  </link>
+  <link client_id="link-8" xmlns="http://www.geni.net/resources/rspec/3">
+    <interface_ref client_id="interface-16" xmlns="http://www.geni.net/resources/rspec/3"/>
+    <interface_ref client_id="interface-17" xmlns="http://www.geni.net/resources/rspec/3"/>
+    <component_manager name="urn:publicid:IDN+instageni.illinois.edu+authority+cm" xmlns="http://www.geni.net/resources/rspec/3"/>
+  </link>
+  <stitching lastUpdateTime="20151214:22:40:04" xmlns="http://hpn.east.isi.edu/rspec/ext/stitch/0.1/">
+    <path id="link-0">
+      <hop id="1">
+        <link id="urn:publicid:IDN+instageni.idre.ucla.edu+interface+procurve2:1.24.al2s">
+          <trafficEngineeringMetric>10</trafficEngineeringMetric>
+          <capacity>20000</capacity>
+          <switchingCapabilityDescriptor>
+            <switchingcapType>l2sc</switchingcapType>
+            <encodingType>ethernet</encodingType>
+            <switchingCapabilitySpecificInfo>
+              <switchingCapabilitySpecificInfo_L2sc>
+                <interfaceMTU>1500</interfaceMTU>
+                <vlanRangeAvailability>1613</vlanRangeAvailability>
+                <suggestedVLANRange>1613</suggestedVLANRange>
+                <vlanTranslation>false</vlanTranslation>
+              </switchingCapabilitySpecificInfo_L2sc>
+            </switchingCapabilitySpecificInfo>
+          </switchingCapabilityDescriptor>
+        </link>
+        <nextHop>2</nextHop>
+      </hop>
+      <hop id="2">
+        <link id="urn:publicid:IDN+al2s.internet2.edu+interface+sdn-sw.losa.net.internet2.edu:eth5/1:ucla-ig">
+          <trafficEngineeringMetric>10</trafficEngineeringMetric>
+          <capacity>20000</capacity>
+          <switchingCapabilityDescriptor>
+            <switchingcapType>l2sc</switchingcapType>
+            <encodingType>ethernet</encodingType>
+            <switchingCapabilitySpecificInfo>
+              <switchingCapabilitySpecificInfo_L2sc>
+                <interfaceMTU>9000</interfaceMTU>
+                <vlanRangeAvailability>1613</vlanRangeAvailability>
+                <suggestedVLANRange>1613</suggestedVLANRange>
+                <vlanTranslation>true</vlanTranslation>
+              </switchingCapabilitySpecificInfo_L2sc>
+            </switchingCapabilitySpecificInfo>
+          </switchingCapabilityDescriptor>
+        </link>
+        <nextHop>3</nextHop>
+      </hop>
+      <hop id="3">
+        <link id="urn:publicid:IDN+al2s.internet2.edu+interface+sdn-sw.newy32aoa.net.internet2.edu:eth7/2:nysernet-ig">
+          <trafficEngineeringMetric>10</trafficEngineeringMetric>
+          <capacity>20000</capacity>
+          <switchingCapabilityDescriptor>
+            <switchingcapType>l2sc</switchingcapType>
+            <encodingType>ethernet</encodingType>
+            <switchingCapabilitySpecificInfo>
+              <switchingCapabilitySpecificInfo_L2sc>
+                <interfaceMTU>9000</interfaceMTU>
+                <vlanRangeAvailability>1700</vlanRangeAvailability>
+                <suggestedVLANRange>1700</suggestedVLANRange>
+                <vlanTranslation>true</vlanTranslation>
+              </switchingCapabilitySpecificInfo_L2sc>
+            </switchingCapabilitySpecificInfo>
+          </switchingCapabilityDescriptor>
+        </link>
+        <nextHop>4</nextHop>
+      </hop>
+      <hop id="4">
+        <link id="urn:publicid:IDN+instageni.nysernet.org+interface+procurve2:1.19.al2s">
+          <trafficEngineeringMetric>10</trafficEngineeringMetric>
+          <capacity>20000</capacity>
+          <switchingCapabilityDescriptor>
+            <switchingcapType>l2sc</switchingcapType>
+            <encodingType>ethernet</encodingType>
+            <switchingCapabilitySpecificInfo>
+              <switchingCapabilitySpecificInfo_L2sc>
+                <interfaceMTU>1500</interfaceMTU>
+                <vlanRangeAvailability>1700</vlanRangeAvailability>
+                <suggestedVLANRange>1700</suggestedVLANRange>
+                <vlanTranslation>false</vlanTranslation>
+              </switchingCapabilitySpecificInfo_L2sc>
+            </switchingCapabilitySpecificInfo>
+          </switchingCapabilityDescriptor>
+        </link>
+        <nextHop>null</nextHop>
+      </hop>
+    </path>
+    <path id="link-7">
+      <hop id="1">
+        <link id="urn:publicid:IDN+instageni.nysernet.org+interface+procurve2:1.19.al2s">
+          <trafficEngineeringMetric>10</trafficEngineeringMetric>
+          <capacity>20000</capacity>
+          <switchingCapabilityDescriptor>
+            <switchingcapType>l2sc</switchingcapType>
+            <encodingType>ethernet</encodingType>
+            <switchingCapabilitySpecificInfo>
+              <switchingCapabilitySpecificInfo_L2sc>
+                <interfaceMTU>1500</interfaceMTU>
+                <vlanRangeAvailability>1703</vlanRangeAvailability>
+                <suggestedVLANRange>1703</suggestedVLANRange>
+                <vlanTranslation>false</vlanTranslation>
+              </switchingCapabilitySpecificInfo_L2sc>
+            </switchingCapabilitySpecificInfo>
+          </switchingCapabilityDescriptor>
+        </link>
+        <nextHop>2</nextHop>
+      </hop>
+      <hop id="2">
+        <link id="urn:publicid:IDN+al2s.internet2.edu+interface+sdn-sw.newy32aoa.net.internet2.edu:eth7/2:nysernet-ig">
+          <trafficEngineeringMetric>10</trafficEngineeringMetric>
+          <capacity>20000</capacity>
+          <switchingCapabilityDescriptor>
+            <switchingcapType>l2sc</switchingcapType>
+            <encodingType>ethernet</encodingType>
+            <switchingCapabilitySpecificInfo>
+              <switchingCapabilitySpecificInfo_L2sc>
+                <interfaceMTU>9000</interfaceMTU>
+                <vlanRangeAvailability>1703</vlanRangeAvailability>
+                <suggestedVLANRange>1703</suggestedVLANRange>
+                <vlanTranslation>true</vlanTranslation>
+              </switchingCapabilitySpecificInfo_L2sc>
+            </switchingCapabilitySpecificInfo>
+          </switchingCapabilityDescriptor>
+        </link>
+        <nextHop>3</nextHop>
+      </hop>
+      <hop id="3">
+        <link id="urn:publicid:IDN+al2s.internet2.edu+interface+sdn-sw.star.net.internet2.edu:eth7/2:illinois-ig">
+          <trafficEngineeringMetric>10</trafficEngineeringMetric>
+          <capacity>20000</capacity>
+          <switchingCapabilityDescriptor>
+            <switchingcapType>l2sc</switchingcapType>
+            <encodingType>ethernet</encodingType>
+            <switchingCapabilitySpecificInfo>
+              <switchingCapabilitySpecificInfo_L2sc>
+                <interfaceMTU>9000</interfaceMTU>
+                <vlanRangeAvailability>1766</vlanRangeAvailability>
+                <suggestedVLANRange>1766</suggestedVLANRange>
+                <vlanTranslation>true</vlanTranslation>
+              </switchingCapabilitySpecificInfo_L2sc>
+            </switchingCapabilitySpecificInfo>
+          </switchingCapabilityDescriptor>
+        </link>
+        <nextHop>4</nextHop>
+      </hop>
+      <hop id="4">
+        <link id="urn:publicid:IDN+instageni.illinois.edu+interface+procurve2:2.4.al2s">
+          <trafficEngineeringMetric>10</trafficEngineeringMetric>
+          <capacity>20000</capacity>
+          <switchingCapabilityDescriptor>
+            <switchingcapType>l2sc</switchingcapType>
+            <encodingType>ethernet</encodingType>
+            <switchingCapabilitySpecificInfo>
+              <switchingCapabilitySpecificInfo_L2sc>
+                <interfaceMTU>1500</interfaceMTU>
+                <vlanRangeAvailability>1766</vlanRangeAvailability>
+                <suggestedVLANRange>1766</suggestedVLANRange>
+                <vlanTranslation>false</vlanTranslation>
+              </switchingCapabilitySpecificInfo_L2sc>
+            </switchingCapabilitySpecificInfo>
+          </switchingCapabilityDescriptor>
+        </link>
+        <nextHop>null</nextHop>
+      </hop>
+    </path>
+  </stitching>
+  <rs:site_info xmlns:rs="http://www.protogeni.net/resources/rspec/ext/site-info/1">
+    <rs:location country="US" latitude="43.049957" longitude="-76.152849"/>
+  </rs:site_info>
+  <rs:site_info xmlns:rs="http://www.protogeni.net/resources/rspec/ext/site-info/1">
+    <rs:location country="US" latitude="34.069444" longitude="-118.443056"/>
+  </rs:site_info>
+  <rs:site_info xmlns:rs="http://www.protogeni.net/resources/rspec/ext/site-info/1">
+    <rs:location country="US" latitude="40.109665" longitude="-88.204247"/>
+  </rs:site_info>
+  <rs:site_info xmlns:rs="http://www.protogeni.net/resources/rspec/ext/site-info/1">
+    <rs:location country="US" latitude="38.946767" longitude="-92.331461"/>
+  </rs:site_info>
+</rspec>
+
+
